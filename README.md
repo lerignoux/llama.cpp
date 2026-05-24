@@ -57,6 +57,12 @@ llama serve -hf ggml-org/Qwen3.5-0.8B-GGUF
     </tr>
 <table>
 
+### Custom build:
+Build for cuda 12.3:
+```
+docker build -t lerignoux/llama.cpp:server-cuda-12.3 --target server -f .devops/cuda.Dockerfile --build-arg CUDA_VERSION=12.3.2 .
+```
+
 ## Description
 
 The main goal of `llama.cpp` is to enable LLM (and VLM) inference with minimal setup and state-of-the-art performance on
