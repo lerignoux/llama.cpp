@@ -59,8 +59,12 @@ llama serve -hf ggml-org/Qwen3.5-0.8B-GGUF
 
 ### Custom build:
 Build for cuda 12.3:
-```
+```bash
 docker build -t lerignoux/llama.cpp:server-cuda-12.3 --target server -f .devops/cuda.Dockerfile --build-arg CUDA_VERSION=12.3.2 .
+```
+For RPC server:
+```bash
+docker build -t lerignoux/llama.cpp:rpc-cuda-12.3 --target rpc -f .devops/cuda.Dockerfile --build-arg CUDA_VERSION=12.3.2 .
 ```
 
 ## Description
